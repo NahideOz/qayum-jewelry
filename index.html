@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Qayum Jewelry | Handmade</title>
+    <style>
+        /* Globale Stile & Farbpalette aus dem Logo */
+        :root {
+            --bg-color: #f9f7f4; /* Cremeweiß aus dem Logo-Hintergrund */
+            --text-color: #1a1a1a;
+            --emerald-green: #0a4d3c; /* Dunkles Smaragdgrün */
+            --gold-accent: #c5a059; /* Edler Goldton */
+            --white: #ffffff;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Playfair Display', 'Didot', 'Georgia', serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+            padding-bottom: 60px;
+        }
+
+        /* Header & Logo */
+        header {
+            text-align: center;
+            padding: 40px 20px;
+            background-color: var(--bg-color);
+        }
+
+        .logo-container {
+            margin-bottom: 15px;
+        }
+
+        /* SVG Nachbildung des runden Schmuck-Logos */
+        .logo-svg {
+            width: 120px;
+            height: 120px;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            font-weight: 400;
+            letter-spacing: 2px;
+            margin-bottom: 5px;
+        }
+
+        .subtitle {
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 0.9rem;
+            letter-spacing: 6px;
+            color: var(--emerald-green);
+            text-transform: uppercase;
+        }
+
+        /* Produktbereich (Grid-Layout) */
+        .shop-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .product-card {
+            background-color: var(--white);
+            border: 1px solid rgba(197, 160, 89, 0.2);
+            border-radius: 4px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.02);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 25px;
+            text-align: center;
+        }
+
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(197, 160, 89, 0.15);
+        }
+
+        /* Platzhalter für Schmuckstücke (Vektorgrafiken basierend auf Ihren Fotos) */
+        .product-image-wrapper {
+            width: 100%;
+            height: 280px;
+            background-color: #111; /* Dunkler Samt-Hintergrund wie auf den Fotos */
+            border-radius: 4px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .product-title {
+            font-size: 1.4rem;
+            margin-bottom: 8px;
+            font-weight: 400;
+        }
+
+        .product-description {
+            font-size: 0.95rem;
+            color: #666;
+            margin-bottom: 15px;
+            height: 45px;
+            overflow: hidden;
+        }
+
+        .product-price {
+            font-size: 1.25rem;
+            color: var(--emerald-green);
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        /* Call-to-Action Button für kostenlose Anfragen */
+        .btn-inquire {
+            display: inline-block;
+            background-color: var(--emerald-green);
+            color: var(--white);
+            text-decoration: none;
+            padding: 10px 24px;
+            border-radius: 2px;
+            font-size: 0.9rem;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            transition: background-color 0.3s;
+            border: 1px solid var(--emerald-green);
+            width: 100%;
+        }
+
+        .btn-inquire:hover {
+            background-color: transparent;
+            color: var(--emerald-green);
+        }
+
+        /* Fußzeile */
+        footer {
+            text-align: center;
+            padding: 40px 20px;
+            font-size: 0.85rem;
+            color: #888;
+            border-top: 1px solid rgba(0,0,0,0.05);
+            margin-top: 5px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- HEADER / BRANDING -->
+    <header>
+        <div class="logo-container">
+            <!-- Vektor-Logo inspiriert von Ihrem runden Logo-Entwurf -->
+            <svg class="logo-svg" viewBox="0 0 100 100">
+                <circle cx="50" cy="50" r="45" fill="none" stroke="#c5a059" stroke-width="1"/>
+                <circle cx="50" cy="50" r="42" fill="none" stroke="#c5a059" stroke-width="0.5" stroke-dasharray="2,2"/>
+                <!-- Smaragd-Zentralstein -->
+                <polygon points="42,35 58,35 66,45 66,55 58,65 42,65 34,55 34,45" fill="#0a4d3c" stroke="#c5a059" stroke-width="0.75"/>
+                <!-- Kleine Zierelemente -->
+                <circle cx="50" cy="22" r="2" fill="#0a4d3c"/>
+                <circle cx="50" cy="78" r="2" fill="#0a4d3c"/>
+                <circle cx="22" cy="50" r="2" fill="#0a4d3c"/>
+                <circle cx="78" cy="50" r="2" fill="#0a4d3c"/>
+            </svg>
+        </div>
+        <h1>Qayum Jewelry</h1>
+        <div class="subtitle">handmade</div>
+    </header>
+
+    <!-- PRODUKT-SHOP -->
+    <main class="shop-container">
+
+        <!-- Kette 1: Malachit (Oval) -->
+        <div class="product-card">
+            <div class="product-image-wrapper">
+                <svg width="100%" height="100%" viewBox="0 0 200 200">
+                    <!-- Kette -->
+                    <path d="M100,10 C100,90 40,110 95,125" fill="none" stroke="#c5a059" stroke-width="2" stroke-dasharray="3,1"/>
+                    <path d="M100,10 C100,90 160,110 105,125" fill="none" stroke="#c5a059" stroke-width="2" stroke-dasharray="3,1"/>
+                    <!-- Öse -->
+                    <rect x="96" y="120" width="8" height="10" fill="#c5a059"/>
+                    <!-- Ovaler Malachit Anhänger -->
+                    <ellipse cx="100" cy="145" rx="30" ry="22" fill="#0a4d3c" stroke="#c5a059" stroke-width="2"/>
+                    <!-- Malachit-Maserung -->
+                    <ellipse cx="95" cy="142" rx="22" ry="15" fill="none" stroke="#147a60" stroke-width="2.5"/>
+                    <ellipse cx="92" cy="140" rx="14" ry="9" fill="none" stroke="#23a985" stroke-width="2"/>
+                    <path d="M 85,145 Q 95,135 115,150" fill="none" stroke="#052c22" stroke-width="2"/>
+                </svg>
+            </div>
+            <h3 class="product-title">Malachit Amulett</h3>
+            <p class="product-description">Handgefertigter ovaler Anhänger mit charakteristischer grüner Bänderung an einer goldenen Erbskette.</p>
+            <div class="product-price">89,00 €</div>
+            <a href="mailto:ihre-email@beispiel.de?subject=Anfrage: Malachit Amulett" class="btn-inquire">Jetzt anfragen</a>
+        </div>
+
+        <!-- Kette 2: Aventurin / Jade (Stab) -->
+        <div class="product-card">
+            <div class="product-image-wrapper">
+                <svg width="100%" height="100%" viewBox="0 0 200 200">
+                    <!-- Kette -->
+                    <path d="M100,10 C80,80 60,100 97,115" fill="none" stroke="#c5a059" stroke-width="1.5"/>
+                    <path d="M100,10 C120,80 140,100 103,115" fill="none" stroke="#c5a059" stroke-width="1.5"/>
+                    <!-- Öse -->
+                    <rect x="96" y="112" width="8" height="8" fill="#c5a059"/>
+                    <!-- Rechteckiger Stab -->
+                    <rect x="91" y="120" width="18" height="60" fill="#52b788" stroke="#c5a059" stroke-width="1.5"/>
+                    <!-- Steinstruktur-Nuancen -->
+                    <path d="M93,125 Q 100,140 95,175" fill="none" stroke="#74c69d" stroke-width="2"/>
+                    <path d="M102,122 Q 106,150 101,178" fill="none" stroke="#40916c" stroke-width="1.5"/>
+                </svg>
+            </div>
+            <h3 class="product-title">Kristallstab Aventurin</h3>
+            <p class="product-description">Eleganter, geometrisch geschliffener Edelstein-Stab in zartem Seegrün gefasst in Gold.</p>
+            <div class="product-priceglobal">75,00 €</div>
+            <a href="mailto:ihre-email@beispiel.de?subject=Anfrage: Kristallstab Aventurin" class="btn-inquire">Jetzt anfragen</a>
+        </div>
+
+        <!-- Kette 3: Streifen-Achat (Braun/Weiß) -->
+        <div class="product-card">
+            <div class="product-image-wrapper">
+                <svg width="100%" height="100%" viewBox="0 0 200 200">
+                    <!-- Kette -->
+                    <path d="M100,10 C70,70 50,100 96,125" fill="none" stroke="#c5a059" stroke-width="2"/>
+                    <path d="M100,10 C130,70 150,100 104,125" fill="none" stroke="#c5a059" stroke-width="2"/>
+                    <!-- Öse -->
+                    <rect x="95" y="122" width="10" height="8" fill="#c5a059"/>
+                    <!-- Ovaler Achat -->
+                    <ellipse cx="100" cy="150" rx="26" ry="32" fill="#d4a373" stroke="#c5a059" stroke-width="2"/>
+                    <!-- Typische Achat-Streifen (Ocker, Weiß, Braun) -->
+                    <path d="M 76,140 Q 100,135 124,142" fill="none" stroke="#ffee32" stroke-width="4"/>
+                    <path d="M 74,150 Q 100,148 126,151" fill="none" stroke="#ffffff" stroke-width="5"/>
+                    <path d="M 75,162 Q 100,160 125,163" fill="none" stroke="#8338ec" stroke-width="3" opacity="0.1"/>
+                    <path d="M 78,168 Q 100,165 122,170" fill="none" stroke="#6f4e37" stroke-width="4"/>
+                </svg>
+            </div>
+            <h3 class="product-title">Streifen-Achat Medaillon</h3>
+  
